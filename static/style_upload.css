@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    height: 100vh;
+    font-family: 'JetBrains Mono Medium';
+    display: flex;
+    flex-direction: column; 
+    /* align-items: center; */
+    justify-content: center;
+    background-image: url(assets/home_bkg.png);
+    background-position: center;
+    background-size: cover;;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.header{
+    width: 100%;
+    height: 100%;
+    border-top: 0;
+    text-align: center;
+}
+
+nav{
+    width: 100%;   
+    padding: 5px 0;
+    text-align: center;
+}
+
+
+
+.logo{
+    
+    margin: 5px 0;
+    cursor: pointer;
+    color: #fff
+}
+
+nav ul{
+    background: #000;
+    width: 100%;
+    margin-top: 10px;    
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px 30px;
+    color: #fff;
+}
+
+li a:link{
+    color:#fff; text-decoration:none;  
+}
+li a:visited{
+    color:#fff;text-decoration:none;
+}
+
+
+
+
+
+
+
+nav.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 8%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: padding 1s;
+}
+
+nav.sticky ul{
+    width: auto;
+}
+
+
+.form-wrapper{
+    text-align: center;
+    align-items: center;
+    /* background-color: rgb(41,45,62); */
+    width: 100%;
+    color: #ffffff;
+    border-radius: 2px;
+    padding: 50px;
+}
+.form-wrapper .function{
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
+.form-wrapper .input-wrapper{
+    /* background-color: rgb(41,45,62); */
+    border: 0;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-size: 15px;
+    /* color: #ffffff; */
+    outline: none;
+}
+.form-wrapper .input-wrapper input::placeholder{
+    text-transform: uppercase;
+}
+.form-wrapper .input-wrapper .border-wrapper{
+    background-image: linear-gradient(to right,#e8198b,#0eb4dd);
+
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-wrapper .input-wrapper .border-wrapper .border-item{
+    height:calc(100% - 4px);
+    width: calc(100% - 4px);
+    border-radius: 30px;
+}
+.form-wrapper .action{
+    display: flex;
+    justify-content: center;
+}
+.form-wrapper .action .button{
+    width: 60%;
+    text-transform: uppercase;
+    border: 2px solid #0e92b3;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition:0.2s;
+}

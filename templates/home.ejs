@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style_home.css">
+
+    
+</head>
+<body>
+    <div class="header">
+        <nav id="navbar">
+            <div class="logo">Welcome to Our Website!</div>
+            <ul id="menu">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/images">PHOTO GALLERY</a></li>
+                <li><a href="/upload">UPLOAD PHOTO</a></li>
+                
+                <% if (user!="NULL") { %>
+                <li><a href="/logout">LOG OUT</a></li>
+                <% } else { %>
+                <li><a href="/signup">SIGN UP</a></li>
+                <li><a href="/login">LOG IN</a></li>
+                    <% } %>    
+            </ul>
+        </nav>
+    </div>   
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros massa, laoreet eget porttitor ut, volutpat ac lectus. Vivamus nisl orci, faucibus sed volutpat et, volutpat auctor libero. Pellentesque rhoncus elit non lectus tincidunt, non fermentum tellus laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sodales nec quam eu efficitur. Mauris ullamcorper vitae leo eget tristique. Praesent consectetur et risus sit amet fermentum. Phasellus convallis id turpis sit amet viverra. Phasellus sed purus dui. Etiam malesuada orci sit amet augue luctus, id rhoncus urna facilisis.
+
+        Nunc condimentum ex ante, eu consequat nunc pellentesque quis. Etiam pellentesque odio ut quam semper, quis auctor neque commodo. Nulla sit amet fringilla lectus, iaculis ultrices tellus. Sed non ex ex. Aenean sagittis interdum commodo. Phasellus accumsan arcu quis enim semper, eget porttitor tortor feugiat. Ut vel suscipit felis, ut efficitur turpis.
+        
+        In lobortis justo vitae velit semper tempor. Aliquam erat volutpat. Vestibulum cursus nisi vitae consectetur semper. Sed vel nibh elit. Fusce nec tempor nulla, sit amet pellentesque ipsum. Mauris facilisis feugiat diam, nec dignissim eros gravida eget. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        
+        Donec sagittis condimentum aliquet. Donec in fringilla lacus. Sed quis semper erat. Aliquam molestie molestie consectetur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Aliquam lacinia quam vel quam tincidunt, a facilisis nibh bibendum. Maecenas maximus hendrerit lorem eu volutpat. Aenean vitae purus varius, euismod velit non, feugiat quam. Duis accumsan tempus elementum. Vestibulum lorem sem, porta id lobortis ut, commodo sed ipsum. Donec quis nisl eleifend risus suscipit tincidunt eget at turpis. Aenean in tellus ut tellus cursus auctor sed eleifend tortor. Vestibulum ut scelerisque libero, ut congue est.
+        
+        Duis et sapien diam. Mauris lobortis, leo sit amet suscipit condimentum, dui mi fermentum eros, non sagittis lectus felis ac ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum diam neque, scelerisque a ultricies ut, posuere ac libero. Suspendisse tristique ultrices aliquam. Praesent quis leo ac magna ullamcorper bibendum. Quisque eu lorem quam. Vestibulum aliquet ex neque. Pellentesque mattis rutrum tortor, sed rutrum urna pulvinar eu. Quisque aliquet risus ac lacus convallis, at accumsan urna viverra. Donec semper elementum rhoncus. Duis diam magna, convallis quis erat nec, rhoncus ultrices libero. Praesent fringilla laoreet diam eget volutpat. Nulla facilisi. Donec quis nibh odio.
+    </p>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros massa, laoreet eget porttitor ut, volutpat ac lectus. Vivamus nisl orci, faucibus sed volutpat et, volutpat auctor libero. Pellentesque rhoncus elit non lectus tincidunt, non fermentum tellus laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sodales nec quam eu efficitur. Mauris ullamcorper vitae leo eget tristique. Praesent consectetur et risus sit amet fermentum. Phasellus convallis id turpis sit amet viverra. Phasellus sed purus dui. Etiam malesuada orci sit amet augue luctus, id rhoncus urna facilisis.
+
+        Nunc condimentum ex ante, eu consequat nunc pellentesque quis. Etiam pellentesque odio ut quam semper, quis auctor neque commodo. Nulla sit amet fringilla lectus, iaculis ultrices tellus. Sed non ex ex. Aenean sagittis interdum commodo. Phasellus accumsan arcu quis enim semper, eget porttitor tortor feugiat. Ut vel suscipit felis, ut efficitur turpis.
+        
+        In lobortis justo vitae velit semper tempor. Aliquam erat volutpat. Vestibulum cursus nisi vitae consectetur semper. Sed vel nibh elit. Fusce nec tempor nulla, sit amet pellentesque ipsum. Mauris facilisis feugiat diam, nec dignissim eros gravida eget. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        
+        Donec sagittis condimentum aliquet. Donec in fringilla lacus. Sed quis semper erat. Aliquam molestie molestie consectetur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Aliquam lacinia quam vel quam tincidunt, a facilisis nibh bibendum. Maecenas maximus hendrerit lorem eu volutpat. Aenean vitae purus varius, euismod velit non, feugiat quam. Duis accumsan tempus elementum. Vestibulum lorem sem, porta id lobortis ut, commodo sed ipsum. Donec quis nisl eleifend risus suscipit tincidunt eget at turpis. Aenean in tellus ut tellus cursus auctor sed eleifend tortor. Vestibulum ut scelerisque libero, ut congue est.
+        
+        Duis et sapien diam. Mauris lobortis, leo sit amet suscipit condimentum, dui mi fermentum eros, non sagittis lectus felis ac ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum diam neque, scelerisque a ultricies ut, posuere ac libero. Suspendisse tristique ultrices aliquam. Praesent quis leo ac magna ullamcorper bibendum. Quisque eu lorem quam. Vestibulum aliquet ex neque. Pellentesque mattis rutrum tortor, sed rutrum urna pulvinar eu. Quisque aliquet risus ac lacus convallis, at accumsan urna viverra. Donec semper elementum rhoncus. Duis diam magna, convallis quis erat nec, rhoncus ultrices libero. Praesent fringilla laoreet diam eget volutpat. Nulla facilisi. Donec quis nibh odio.
+    </p>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros massa, laoreet eget porttitor ut, volutpat ac lectus. Vivamus nisl orci, faucibus sed volutpat et, volutpat auctor libero. Pellentesque rhoncus elit non lectus tincidunt, non fermentum tellus laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sodales nec quam eu efficitur. Mauris ullamcorper vitae leo eget tristique. Praesent consectetur et risus sit amet fermentum. Phasellus convallis id turpis sit amet viverra. Phasellus sed purus dui. Etiam malesuada orci sit amet augue luctus, id rhoncus urna facilisis.
+
+        Nunc condimentum ex ante, eu consequat nunc pellentesque quis. Etiam pellentesque odio ut quam semper, quis auctor neque commodo. Nulla sit amet fringilla lectus, iaculis ultrices tellus. Sed non ex ex. Aenean sagittis interdum commodo. Phasellus accumsan arcu quis enim semper, eget porttitor tortor feugiat. Ut vel suscipit felis, ut efficitur turpis.
+        
+        In lobortis justo vitae velit semper tempor. Aliquam erat volutpat. Vestibulum cursus nisi vitae consectetur semper. Sed vel nibh elit. Fusce nec tempor nulla, sit amet pellentesque ipsum. Mauris facilisis feugiat diam, nec dignissim eros gravida eget. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        
+        Donec sagittis condimentum aliquet. Donec in fringilla lacus. Sed quis semper erat. Aliquam molestie molestie consectetur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Aliquam lacinia quam vel quam tincidunt, a facilisis nibh bibendum. Maecenas maximus hendrerit lorem eu volutpat. Aenean vitae purus varius, euismod velit non, feugiat quam. Duis accumsan tempus elementum. Vestibulum lorem sem, porta id lobortis ut, commodo sed ipsum. Donec quis nisl eleifend risus suscipit tincidunt eget at turpis. Aenean in tellus ut tellus cursus auctor sed eleifend tortor. Vestibulum ut scelerisque libero, ut congue est.
+        
+        Duis et sapien diam. Mauris lobortis, leo sit amet suscipit condimentum, dui mi fermentum eros, non sagittis lectus felis ac ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum diam neque, scelerisque a ultricies ut, posuere ac libero. Suspendisse tristique ultrices aliquam. Praesent quis leo ac magna ullamcorper bibendum. Quisque eu lorem quam. Vestibulum aliquet ex neque. Pellentesque mattis rutrum tortor, sed rutrum urna pulvinar eu. Quisque aliquet risus ac lacus convallis, at accumsan urna viverra. Donec semper elementum rhoncus. Duis diam magna, convallis quis erat nec, rhoncus ultrices libero. Praesent fringilla laoreet diam eget volutpat. Nulla facilisi. Donec quis nibh odio.
+    </p>
+
+    <script>
+        var navbar = document.getElementById("navbar");
+        var menu = document.getElementById("menu");
+        window.onscroll = function () {  
+            if(window.pageYOffset>=menu.offsetTop){
+                navbar.classList.add("sticky");
+                // console.log("Yup!!!!!!!!!");
+            }else{
+                navbar.classList.remove("sticky");
+                // console.log("Nope");
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+ {
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "pwa-chrome",
+        "request": "launch",
+        "name": "Launch Chrome against localhost",
+        "url": "http://localhost:8080",
+        "webRoot": "${workspaceFolder}"
+      },
+      {
+        "name": "使用本机chrome调试",
+        "type": "chrome",
+        "request": "launch",
+        "file":"${file}",
+        "runtimeExecutable":"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        //"runtimeExecutable":这里写自己浏览器的安装路径，按自己路径作修改即可
+        "sourceMaps":true,
+        "webRoot": "${workspaceRoot}",
+        "port":9222
+      }
+    ]
+  }

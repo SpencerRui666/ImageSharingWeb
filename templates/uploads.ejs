@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+   
+    <link rel="stylesheet" href="style_upload.css">
+    
+</head>
+
+<body>
+    <div class="header">
+        <nav id="navbar">
+            <div class="logo">Welcome to Our Website!</div>
+            <ul id="menu">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/images">PHOTO GALLERY</a></li>
+                <li><a href="/upload">UPLOAD PHOTO</a></li>
+                <li><a href="/logout">LOG OUT</a></li>
+            </ul>
+            
+        </nav>
+        <div class="form-wrapper">
+            <div class="function">
+                Here you can upload files!
+            </div>
+            <form class="input-wrapper" action="/upload" method="post" enctype="multipart/form-data">
+                <div class="border-wrapper"><input type="file" name="myimage"></div>
+                <div class="action"></div><input type="submit"></div>
+            </form>
+
+        </div>
+
+
+        
+    </div>   
+
+    
+    <script>
+        var navbar = document.getElementById("navbar");
+        var menu = document.getElementById("menu");
+        window.onscroll = function () {  
+            if(window.pageYOffset>=menu.offsetTop){
+                navbar.classList.add("sticky");
+            }else{
+                navbar.classList.remove("sticky");
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <style>
+        *{
+            margin: 20px;
+            padding: 0px;
+        }
+
+        body{
+            width: 100%;
+            height: 100vh;
+            background-image: url(assets/home_bkg.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .box{
+            /* align-items: center; */
+            text-align: center;
+        }
+        img{
+           width: 250px; 
+           height: 300px;
+           background-color: white;
+           border: 30px solid rgb(0, 0, 0);
+
+           
+
+            transition: transform .65s;
+
+
+        }
+        img:hover{
+
+
+            transform: scale(1.3);
+
+
+        }
+        
+        nav{
+            width: 100%;   
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo{
+            
+            margin: 20px 0;
+            cursor: pointer;
+            color: #fff
+        }
+
+        nav ul{
+            background: #000;
+            width: 100%;
+            margin-top: 10px;    
+        }
+
+        nav ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 20px 30px;
+            color: #fff;
+        }
+
+        li a:link{
+            color:#fff; text-decoration:none;  
+        }
+        li a:visited{
+            color:#fff;text-decoration:none;
+        }
+        
+
+    </style>
+
+    
+</head>
+<body>
+    <div class="box">
+        <nav id="navbar">
+            <div class="logo">Welcome to Our Website!</div>
+            <ul id="menu">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/images">PHOTO GALLERY</a></li>
+                <li><a href="/upload">UPLOAD PHOTO</a></li>
+                
+                <% if (user!="NULL") { %>
+                <li><a href="/logout">LOG OUT</a></li>
+                <% } else { %>
+                <li><a href="/signup">SIGN UP</a></li>
+                <li><a href="/login">LOG IN</a></li>
+                    <% } %>    
+            </ul>
+        </nav>
+        <% for(var i =0; i < filename.length; i ++){ %>
+        
+            <a href="/images/<%= filename[i] %>"><img src="/uploadFiles/<%= filename[i] %>"></a>
+  
+        <% } %>
+
+    </div>
+    
+
+</body>
+</html>

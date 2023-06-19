@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+    <!-- <link rel="stylesheet" href="style_image.css"> -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: rgb(234, 218, 218);
+        }
+        
+        img{
+           width: 500px; 
+           height: 500px;
+           
+           border: 30px solid #ddd;
+           transition: transform .65s;
+        }
+
+        .box{
+            text-align: center;
+        }
+        .hide {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+        nav{
+            width: 100%;   
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo{
+            
+            margin: 20px 0;
+            cursor: pointer;
+            color: #fff
+        }
+
+        nav ul{
+            background: rgb(180, 215, 182);
+            width: 100%;
+            margin-top: 10px;    
+        }
+
+        nav ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 20px 30px;
+            color: #fff;
+        }
+
+        li a:link{
+            color:#fff; text-decoration:none;  
+        }
+        li a:visited{
+            color:#fff;text-decoration:none;
+        }
+        .button
+		{
+			border:1px solid #000000;
+			border-radius:2px;
+			background-color:#FFDAB9;
+			font-size:14px;	
+		}
+		#btn
+		{
+			border:1px solid #000000;
+			border-radius:2px;
+			background-color:#FFDAB9;
+			font-size:14px;	
+		}
+
+        .container{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .imageInfo{
+            float: left;
+            width: 48%;
+        }
+        .commentInfo{
+            float: left;
+            width: 48%;
+            border-style:solid; 
+            border-width:1px 0 1px 1px; 
+            border-color:#b4b4b4 #eeeeee #d8d8d8 #bbbbbb;
+        }
+
+        
+        .imageInfo{
+
+            border-style:solid; 
+            border-width:1px 0 1px 1px; 
+            border-color:#b4b4b4 #eeeeee #d8d8d8 #bbbbbb;
+        }
+        .imageInfo .innerImageInfo{
+            display:block; 
+            height: 22px;
+            
+            *margin-top:-1px; 
+            padding-top:2px; 
+            border:1px solid; 
+            border-color:#ececec #d8d8d8 #d8d8d8 #eeeeee; 
+            color:#666666;
+        }
+        .commentInfo .innerComment{
+            display:block; 
+            height: 22px;
+            
+            *margin-top:-1px; 
+            padding-top:2px; 
+            border:1px solid; 
+            border-color:#ececec #d8d8d8 #d8d8d8 #eeeeee; 
+            color:#666666;
+        }
+
+
+    </style>
+    
+    
+</head>
+<body>
+    
+
+
+    <div class="box">
+        <nav id="navbar">
+            <div class="logo">Welcome to Our Website!</div>
+            <ul id="menu">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/images">PHOTO GALLERY</a></li>
+                <li><a href="/upload">UPLOAD PHOTO</a></li>
+                
+                <% if (user!="NULL") { %>
+                <li><a href="/logout">LOG OUT</a></li>
+                <% } else { %>
+                <li><a href="/signup">SIGN UP</a></li>
+                <li><a href="/login">LOG IN</a></li>
+                    <% } %>    
+            </ul>
+        </nav>
+        
+        <div class="imgwrapper">
+            <img src="/uploadFiles/<%= filename %>">
+        </div>
+        <div class="container">
+            
+            <div class="imageInfo">
+                Image Info Here:
+                <div class="uploadDate innerImageInfo">uploadDate:<%= uploadDate %></div>
+                <div class="uploadUser innerImageInfo">uploadUser:<%= uploadUser %></div>
+                <div class="likenum innerImageInfo">likes:<%= like_num %></div>
+            </div>
+            <div class="commentInfo">
+                Comments:
+                <% for(var i =0; i < users.length; i ++){ %>
+                    <br>
+                    <div class="comments">
+                        
+                        <div class="username innerComment">username:<%= users[i] %></div>
+                        <div class="content innerComment">conmment:<%= contents[i] %></div>
+                    </div>
+    
+                <% } %>
+            </div>
+            
+                
+        </div>
+            
+        <button id="btn" value="Click to Show" type="button">Click to Write Comments</button>
+        <div id="div1" class="form-wrapper hide">
+            
+            
+            <form class="input-wrapper" id="comments-form" action="/images/<%= filename %>/comment" method="post" >
+                
+                <div class="border-wrapper"><input type="text" name="comment" placeholder="Comment Here" class="border-item"></div>
+                <div class="action"><input type="submit" value ="submit your comment" class="button"></div>
+            </form>
+            <form class="input-wrapper" id="like-form" action="/images/<%= filename %>/like" method="post" >
+                
+                <div class="action"><input type="submit" value="like this image" class="button"></div>
+            </form>
+            <div></div>
+
+        </div>
+
+    </div>
+   
+
+    <script>
+        var btn = document.getElementById("btn");
+        var div1 = document.getElementById("div1");
+
+        btn.onclick = function(){
+            //如果元素div当前是显示的, 就让他隐藏
+            if(btn.value == "Click to Hide"){
+                div1.className = "hide";
+                btn.value = "Click to Show";
+            }
+            else {
+                div1.className = "show";
+                btn.value = "Click to Hide";
+            }
+            
+        };
+
+    </script>
+
+
+</body>
+</html>

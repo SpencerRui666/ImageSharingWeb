@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width",initial->
+    <link rel="stylesheet" href="style_login.css">
+    <title>LOGIN</title>
+</head>
+<body>
+    <div class="header">
+        <nav id="navbar">
+            <div class="logo">Welcome to Our Website!</div>
+            <ul id="menu">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/images">PHOTO GALLERY</a></li>
+                <li><a href="/upload">UPLOAD PHOTO</a></li>
+                <li><a href="/signup">SIGN UP</a></li>
+                <li><a href="/login">LOG IN</a></li>
+            </ul>
+        </nav>
+    </div>   
+
+
+    <div class="form-wrapper">
+        <div class="function">
+            Log In
+        </div>
+        <form class="input-wrapper" id="login-form" action="/login" method="post">
+            <div class="border-wrapper"><input type="text" name="username" placeholder="Username" class="border-item"></div>
+            <div class="border-wrapper"><input type="password" name="password" placeholder="Password" class="border-item"></div>
+            <div class="action"><input type="submit" class="button"></div>
+        </form>
+    </div>
+
+
+    
+
+    <script>
+        var navbar = document.getElementById("navbar");
+        var menu = document.getElementById("menu");
+        window.onscroll = function () {  
+            if(window.pageYOffset>=menu.offsetTop){
+                navbar.classList.add("sticky");
+            }else{
+                navbar.classList.remove("sticky");
+            }
+        }
+
+
+    </script>
+</body>
+</html>
